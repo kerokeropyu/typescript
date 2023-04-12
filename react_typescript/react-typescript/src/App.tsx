@@ -143,8 +143,17 @@ function App() {
       age: 22,
     },   
   ];
-    console.log(memberRegister);
+  console.log(memberRegister);
   // inputタグの値が重複していたら、アラート表示
+  // const result = memberRegister.filter(item => memberRegister.includes(item));
+  const arr: string[] = [];
+  memberRegister.map((value, index) => (
+    memberRegister[index].name == value.name ? arr.push(value.name) : ''
+  ));
+  if (arr.length > 0) {
+    alert("重複しています。");
+  }
+  console.log(arr);
 
 }
 
