@@ -21,6 +21,10 @@ function App() {
     age: number,
   }
 
+
+  const hasDuplicates = (arr: string[]) => {
+    return new Set(arr).size !== arr.length;
+  }
   const initialize = () => {
     const member: MemberInterface[] = [
       {
@@ -86,7 +90,6 @@ function App() {
     name8.current.value = member[7].name;
     name9.current.value = member[8].name;
     name10.current.value = member[9].name;
-
   }
 
   const register = () => {
@@ -145,16 +148,13 @@ function App() {
   ];
   console.log(memberRegister);
   // inputタグの値が重複していたら、アラート表示
-  // const result = memberRegister.filter(item => memberRegister.includes(item));
-  const arr: string[] = [];
+  const memberName: string[] = [];
   memberRegister.map((value, index) => (
-    memberRegister[index].name == value.name ? arr.push(value.name) : ''
+    memberName.push(value.name)
   ));
-  if (arr.length > 0) {
+  if (hasDuplicates(memberName)) {
     alert("重複しています。");
   }
-  console.log(arr);
-
 }
 
   React.useEffect(() => {
