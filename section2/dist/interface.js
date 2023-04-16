@@ -1,3 +1,4 @@
+"use strict";
 const memberI = {
     name: '田中',
     age: 32
