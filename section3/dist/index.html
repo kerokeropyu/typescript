@@ -8,15 +8,30 @@
 </head>
 <body>
     <input id="username">
+    <button onclick="getDogImage()">クリック</button>
+    <script src="async.js"></script>
 <script>
     // const input = document.getElementById('username');
     // input.placeholder = '山田太郎';
 
-    const target = document.getElementById('username');
-    target.addEventListener('input', (e) => {
-        console.log(e)
-        console.log(e.target.value);
-    });
+    // const target = document.getElementById('username');
+    // target.addEventListener('input', (e) => {
+    //     console.log(e)
+    //     console.log(e.target.value);
+    // });
+
+    // const getDogImage = async() => {
+    //     const url = 'https://dog.ceo/api/breeds/image/random';
+    //     const res = await fetch(url, {method: 'get'})
+    //         .then(responce => {if (responce.ok) {
+    //             return responce.json();
+    //         }
+    //         throw new Error('error');
+    //     })
+    //     .catch(e => console.log(e.message));
+    //     console.log(res);
+    //     return res;
+    // }
  </script>
 </body>
 </html>
