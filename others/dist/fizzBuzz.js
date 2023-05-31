@@ -8,6 +8,8 @@
 // 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
 const fizzBuzzGenerator = () => {
     let i = 0;
+    const isFizz = i % 3 == 0 ? true : false;
+    const isBuzz = i % 5 == 0 ? true : false;
     while (i < 1000) {
         while (i % 3 == 0) {
             while (i % 3 == 0 && i % 5 === 0) {
@@ -30,7 +32,7 @@ const fizzBuzzGenerator = () => {
     }
 };
 fizzBuzzGenerator();
-const normalFizzBuzzGenerator2 = () => {
+const normalFizzBuzzGenerator = () => {
     let i = 1;
     while (i < 1000) {
         if (i % 3 == 0 && i % 5 === 0) {
@@ -48,5 +50,34 @@ const normalFizzBuzzGenerator2 = () => {
         i++;
     }
 };
+normalFizzBuzzGenerator();
+const fizzBuzzGenerator3 = () => {
+    let i = 0;
+    while (i < 1000) {
+        const isFizz = i % 3 == 0 ? true : false;
+        const isBuzz = i % 5 == 0 ? true : false;
+        while (i % 3 == 0) {
+        }
+        while (i % 3 == 0) {
+            while (i % 3 == 0 && i % 5 === 0) {
+                console.log(`${i}:FizzBuzz`);
+                break;
+            }
+            console.log(`${i}:Fizz`);
+            break;
+        }
+        while (i % 5 == 0) {
+            while (i % 3 == 0 && i % 5 === 0) {
+                console.log(`${i}:FizzBuzz`);
+                break;
+            }
+            console.log(`${i}:Buzz`);
+            break;
+        }
+        console.log(`${i}`);
+        i++;
+    }
+};
+fizzBuzzGenerator3();
 // normalFizzBuzzGenerator2();
 //# sourceMappingURL=fizzBuzz.js.map
